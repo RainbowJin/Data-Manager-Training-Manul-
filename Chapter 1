@@ -1,0 +1,39 @@
+Chapter 1 
+First known in Data Product Manager
+1.1 Why there exist data product manager
+Big data has four elements: Volume, Velocity, Varitey, Value
+As a data product manager, who will contact with：
+    1> business
+    2> data analyst
+    3> UI designer
+    4> Data development engineer
+    5> Web engineer
+    6> back-end engineer
+    7> Test engineer
+    
+ 1.2 Thinking way
+ 1.2.1 induction(归纳法） and Deduction（演绎法）
+ Derive conclusions from common attributes of known information
+ Deduction is divergent
+ 1.2.2 Data mind
+ 5W2H for : why, where, what, when, who, how, how much
+ 1.2.3 User mind
+ To be a empty mind with product in a user's eyesight
+ 1.2.4 Product mind
+ A hypothetical user model
+ 1.2.5 Engineer mind
+ A implementation model
+     For example to build a report platform:
+     1> get Dashboard to config by page ID
+     2> Render page by dashiboard page
+     3> Gets the chart configuration item by chart ID
+     4> Create a custom icon in the report to render
+     The browser_______________________________________________server
+                           getDashboardConfig(id)
+                           config(json)
+                           getChartData()
+                           chartData(json)
+                           editChart(id)
+                           chartOptions(json)
+1.2.6 Some other minds
+SMART principle: Specific, Measurable, Attainable, Relevant, Time-bound
