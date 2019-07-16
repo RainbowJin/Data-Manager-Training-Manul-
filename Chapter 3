@@ -1,0 +1,61 @@
+Data warehouse theory and application 
+
+3.1 Hadoop
+The three core design is HDFS(Hadoop Distributed File System)/ MapReduce/ HBase
+
+Pig Hive Chukwa    ZooKeepter
+MapReduce HBase    ZooKeepter
+HDFS               ZooKeepter
+
+1) Spark
+2) Kafka
+3) Storm
+4) HBase
+5) HUE for Cloudera's big data Web visulization tool
+6) Oozie for workflow
+7) ZooKeeper
+8) YARN
+
+3.1.2 Other tools
+1)Elasticsearch based on Lucene's searching server, on RESTful Web API
+2)Memcached stored in Key-Value, is a caching system
+3)Redis is a database for log type Key-Value
+
+3.2 Big data platform structure
+Totally for three floors: 原始数据层/数据仓库/数据应用层
+3.2.1 ODS ( Opearational Data Store）                     //操作性数据存储
+functions: 1.在业务系统和数据仓库之间形成一个隔离层
+           2.转移一部分业务系统细节查询的功能
+           3.完成数据仓库中不能完成的一些功能
+3.2.2 DW ( Data Warehouse)                               //数据仓库
+characteristic: 1.按照一定的主题组织，根据业务线划分主题
+                2.集成性，数据来源于多个数据源
+                3.不可更新，对数据的主要操作是查询
+                1）效率高
+                2）数据质量
+                3）可扩展性
+three floors: 数据仓库的三类层次：基础层/主题层/数据集市
+1. 基础层
+ODS层的数据进行轻度汇总，产出轻度汇总明细、维度表、码表、事实集等基础数据
+*建模层次划分
+业务模型——————————————————————领域模型————————————————————逻辑模型————————————————————物理模型
+2. 主题层
+数据的高度聚合层，按照一定的维度和业务逻辑对数据进行聚合，蛀牙哦生成画像表和主题表
+3. 数据及时（DATA MART)
+将主题层和基础层的数据按各业务需求进行聚合，生成宽表和Cube,直接推送给数据分析和业务部门使用
+*特点：
+     1）更具有面向主题性
+     2）支持离线数据，业务使用T+1数据
+     3）数据来源多方面
+     4）查询时间短
+*数据结构一般为星形结构和雪花结构
+     1）事实表 用于记录数据集市表中的详细数据
+     2）维度表 储存非密集型的维度数据
+     
+3.3 Buried data points   //数据埋点
+3.2.1 Buried points way
+code buried/ visualization buried/ null buried
+3.2.2 Buried points events
+Click event/ exposure event/ page duration
+  *page duration=t2-t1(t2=离开页面时间，t1=用户进入页面的时间）
+  
